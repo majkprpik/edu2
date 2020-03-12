@@ -1,0 +1,333 @@
+<div class="container">
+  <div class="row">
+    <div class="predavanje">
+      <h2>1.</h2>
+      <div class="col-md-12">
+        <h4>String Interpolation</h4>
+        <p>{{ PRIMJER_STRING_INTERPOLATION }}</p>
+        <h5>{{ PRIMJER_STRING_INTERPOLATION2.header }}</h5>
+        <p>{{ PRIMJER_STRING_INTERPOLATION2.paragraph }}</p>
+        <button>{{ PRIMJER_STRING_INTERPOLATION2.button }}</button>
+        <hr />
+      </div>
+      <div class="col-md-12">
+        <h4>Property Binding</h4>
+        <!-- potrebno staviti "' '" jer je string -->
+        <p [innerHtml]="'Primjer property binding sa stringom'"></p>
+        <p [innerHtml]="PRIMJER_PROPERTY_BINDING_SA_VARIJABLOM"></p>
+        <button [disabled]="true">Klik2</button>
+        <br />
+        <a [href]="LINK">google.com</a>
+        <div class="row">
+          <div class="col-md-6">
+            <h6>INPUT: {{ INPUT_TEXT_PROPERTY_BINDING }}</h6>
+            <h6>CHECKED: {{ INPUT_CHECKBOX_PROPERTY_BINDING }}</h6>
+          </div>
+          <div class="col-md-6">
+            <input type="text" [value]="INPUT_TEXT_PROPERTY_BINDING" />
+            <div>
+              CHECKED:
+              <input
+                type="checkbox"
+                [checked]="INPUT_CHECKBOX_PROPERTY_BINDING"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="col-md-12">
+        <h4>Event binding</h4>
+        <button (click)="klik3()">Klik3</button>
+        <button (click)="klik4($event)">Klik4</button>
+        <input type="text" (input)="pisanje($event)" />
+        <hr />
+      </div>
+      <div class="col-md-12">
+        <h4>Two-way databinding</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <h6>INPUT: {{ INPUT_TEXT_TWO_WAY_DATABINDING }}</h6>
+            <h6>CHECKED: {{ INPUT_CHECKBOX_TWO_WAY_DATABINDING }}</h6>
+          </div>
+          <div class="col-md-6">
+            <!-- potrebno u AppModule u polje imports dodati FormsModule -->
+            <input type="text" [(ngModel)]="INPUT_TEXT_TWO_WAY_DATABINDING" />
+            <div>
+              CHECKED:
+              <input
+                type="checkbox"
+                [(ngModel)]="INPUT_CHECKBOX_TWO_WAY_DATABINDING"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="predavanje">
+      <h2>2.</h2>
+      <div class="col-md-12">
+        <h4>Input i Output:</h4>
+        <app-test-child
+          [ulazniParametar1]="'String'"
+          [ulazniParametar2]="parametarZaChildKomponentu"
+          (izlazniEvent)="eventIzKomponente($event)"
+        ></app-test-child>
+        <p>
+          Ulazni parametar za child komponentu:
+          {{ parametarZaChildKomponentu }}
+        </p>
+        <p>Vrijednost iz child komponente: {{ vrijednostIzChildComponente }}</p>
+      </div>
+      <div class="col-md-12">
+        <h4>Directive:</h4>
+        <div class="primjer">
+          <p>*ngIf:</p>
+          <div class="box" *ngIf="prikazi"></div>
+          <button (click)="prikazi_sakrij()">Prikazi/Sakrij</button>
+        </div>
+        <div class="primjer">
+          <p>*ngFor:</p>
+          <ol>
+            <li *ngFor="let voce of listaVoca">
+              {{ voce }}
+            </li>
+          </ol>
+        </div>
+        <div class="primjer">
+          <p>ngStyle:</p>
+          <p
+            [ngStyle]="{
+              fontWeight: podebljan_tekst == true ? 'bold' : 'normal'
+            }"
+          >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            facere quibusdam et nihil esse perferendis architecto quia, quis,
+            nobis aspernatur laboriosam quidem magnam iste sapiente aut
+            inventore error dolorem. Eaque!
+          </p>
+          <button (click)="podebljan()">Podebljan tekst</button>
+          <button (click)="normalan()">Normalan tekst</button>
+        </div>
+        <div class="primjer">
+          <p>ngClass:</p>
+          <p
+            [ngClass]="{ stil1: stil == 1, stil2: stil == 2, stil3: stil == 3 }"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            consequuntur ratione enim nemo natus, eveniet, perspiciatis delectus
+            rem nisi corporis ab, cum aliquam error fugit ut rerum soluta fugiat
+            repellendus!
+          </p>
+          <button (click)="postavi_stil(1)">Stil1</button>
+          <button (click)="postavi_stil(2)">Stil2</button>
+          <button (click)="postavi_stil(3)">Stil3</button>
+        </div>
+        <div class="primjer">
+          <p>ngSwitch:</p>
+          <div [ngSwitch]="prikazanoPovrce">
+            <ng-template [ngSwitchCase]="case1">{{ case1 }}</ng-template>
+            <ng-template [ngSwitchCase]="case2">{{ case2 }}</ng-template>
+            <ng-template [ngSwitchCase]="case3">{{ case3 }}</ng-template>
+            <ng-template ngSwitchCase="poriluk">poriluk</ng-template>
+            <ng-template ngSwitchDefault>krumpir</ng-template>
+          </div>
+        </div>
+        <div class="primjer">
+          <p>ngSwitch 2:</p>
+          <div [ngSwitch]="9">
+            <p *ngSwitchCase="1">1</p>
+            <p *ngSwitchCase="2">2</p>
+            <p *ngSwitchCase="3">3</p>
+            <p *ngSwitchCase="4">4</p>
+            <p *ngSwitchDefault>5+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="predavanje">
+      <h2>3.</h2>
+      <div class="col-md-12">
+        <h4>Directive:</h4>
+        <div class="primjer">
+          <h6>Attribute directive:</h6>
+          <p podebljaj>
+            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+            officia quos sit voluptas, reprehenderit iusto natus suscipit quis
+            architecto eius optio ut eaque a dolor tempora culpa neque itaque
+            dolorem!
+          </p>
+          <p zelenaPozadina>
+            2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            cumque ab itaque aliquid ex? Odit, numquam ducimus itaque nobis
+            adipisci molestiae eveniet maxime, sequi inventore animi, quod quae
+            vel in!
+          </p>
+          <p boldMouseOver>
+            3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            corrupti veritatis laboriosam iure. Consequatur tempore, voluptates
+            quam unde nemo id odio, odit eveniet placeat commodi qui? Non rem
+            saepe ipsum.
+          </p>
+          <p italicMouseClick>
+            4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laboriosam id dolorem ipsam libero ab doloribus autem vel ratione
+            nam. Consequatur doloribus dolor veniam voluptates illum repellendus
+            iste unde, tempora enim?
+          </p>
+          <p directiveWithProperty text-color="pink" highlight-color="brown">
+            5 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Molestiae, cupiditate, laborum qui delectus, harum ipsum deserunt
+            corrupti neque perspiciatis magni quo quam dolore necessitatibus
+            aspernatur? Porro, inventore enim. Dicta, voluptatum.
+          </p>
+          <p
+            directiveWithProperty
+            [text-color]="'red'"
+            [highlight-color]="highlightColorForDirectiveWithProperty"
+          >
+            6 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
+            numquam odit iure itaque ut officia molestiae architecto voluptatum
+            saepe perferendis impedit odio commodi hic earum, quibusdam, unde
+            eveniet corporis suscipit.
+          </p>
+          <p [directiveWithMainProperty]="'orange'">
+            7 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Blanditiis, repellat quae, nobis veniam neque aut animi expedita
+            voluptatum aperiam id iste natus ducimus eaque dicta fugiat non
+            cupiditate commodi magni.
+          </p>
+          <div class="primjer">
+            <p
+              [setColorDirective]="
+                highlightColorForDirectiveWithPropertyDynamic
+              "
+            >
+              8 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Debitis, est. Dicta suscipit tempora vel voluptate? Aliquid
+              voluptas amet perspiciatis. Sit et cum ex pariatur fugiat,
+              voluptates aperiam est! Ipsa, debitis!
+            </p>
+            <input
+              type="text"
+              [(ngModel)]="highlightColorForDirectiveWithPropertyDynamic"
+            />
+          </div>
+        </div>
+        <div class="primjer">
+          <h6>Structural directive:</h6>
+          <ng-template [ngIf]="ngIfDrugaSintaksa">
+            <p>*ngIf druga sintaksa</p>
+          </ng-template>
+          <button (click)="klik5()">Prikazi/sakrij</button>
+          <hr />
+          <div *customStructuralDirective="!ngIfNasaDirectiva">
+            <p>*ngIf nasa directiva</p>
+          </div>
+          <button (click)="klik6()">Prikazi/sakrij</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="predavanje">
+      <h2>4.</h2>
+      <div class="col-md-12">
+        <h4>Services:</h4>
+        <div class="primjer">
+          <h6>Offline data, continents from file:</h6>
+          <div *ngFor="let continent of continents">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ continent?.text }}</h5>
+                <p class="card-text">{{ (continent?.items)[0].description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="primjer">
+          <h6>Online data, drzave from spin database:</h6>
+          <div *ngFor="let drzava of drzave">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ drzava?.drzaveid }}</h5>
+                <p class="card-text">{{ drzava?.naziv }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="primjer">
+          <h6>
+            Online data, dummy data from
+            <p>https://my-json-server.typicode.com/majkprpik/jsontest/news:</p>
+          </h6>
+          <div *ngFor="let article of news">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ article?.guid }}</h5>
+                <p class="card-text">{{ article?.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="primjer">
+          <h6>
+            Online data, pokemon from
+            <p>https://pokeapi.co/api/v2/pokemon/ditto/:</p>
+          </h6>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ pokemon?.id }}</h5>
+              <p class="card-text">{{ pokemon?.name }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="primjer">
+          <h6>
+            Online data, chuck norris jokes from
+            <p>https://api.chucknorris.io/jokes/random:</p>
+          </h6>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ chuck?.id }}</h5>
+              <p class="card-text">{{ chuck?.value }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="primjer">
+          <h6>
+            Online data, lotr from
+            <p>
+              https://the-one-api.herokuapp.com/v1/book/5cf5805fb53e011a64671582:
+            </p>
+          </h6>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ lotr?._guid }}</h5>
+              <p class="card-text">{{ lotr?.name }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="primjer">
+          <h6>
+            Online data, dummy users from
+            <p>
+              https://reqres.in/api/users:
+            </p>
+          </h6>
+          <div class="card" style="width: 18rem;">
+            <div *ngFor="let users of usersReqRes">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ users?.id }}</h5>
+                  <p class="card-text">{{ users?.email }}</p>
+                  <p class="card-text">{{ users?.first_name }}</p>
+                  <p class="card-text">{{ users?.last_name }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

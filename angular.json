@@ -47,6 +47,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/devexpress-gantt/dist/dx-gantt.min.css",    
               "node_modules/devexpress-diagram/dist/dx-diagram.min.css",
               "node_modules/devextreme/dist/css/dx.common.css",
               "src/themes/generated/theme.base.css",

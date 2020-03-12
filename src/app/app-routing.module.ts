@@ -10,31 +10,44 @@ import {
   DxFormModule,
   DxDiagramModule
 } from "devextreme-angular";
-import { DiagramComponent } from "./pages/diagram/diagram.component";
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
 const routes: Routes = [
   {
-    path: "display-data",
-    component: DisplayDataComponent,
-    canActivate: [AuthGuardService]
+    path: "edu",
+    loadChildren: () => import("./edu/edu.module").then(m => m.EduModule)
   },
   {
-    path: "profile",
-    component: ProfileComponent,
-    canActivate: [AuthGuardService]
+    path: "predavanja",
+    loadChildren: () =>
+      import("./pages/test/test.module").then(m => m.TestModule)
   },
   {
-    path: "home",
-    component: HomeComponent,
-    canActivate: [AuthGuardService]
+    path: "examples",
+    loadChildren: () =>
+      import("./examples/examples.module").then(m => m.ExamplesModule)
   },
-  {
-    path: "diagram",
-    component: DiagramComponent,
-    canActivate: [AuthGuardService]
-  },
+  // {
+  //   path: "display-data",
+  //   component: DisplayDataComponent,
+  //   canActivate: [AuthGuardService]
+  // },
+  // {
+  //   path: "profile",
+  //   component: ProfileComponent,
+  //   canActivate: [AuthGuardService]
+  // },
+  // {
+  //   path: "home",
+  //   component: HomeComponent,
+  //   canActivate: [AuthGuardService]
+  // },
+  // {
+  //   path: "diagram",
+  //   component: DiagramComponent,
+  //   canActivate: [AuthGuardService]
+  // },
   {
     path: "login-form",
     component: LoginFormComponent,
@@ -42,7 +55,7 @@ const routes: Routes = [
   },
   {
     path: "**",
-    redirectTo: "home",
+    redirectTo: "predavanja",
     canActivate: [AuthGuardService]
   }
 ];
@@ -52,17 +65,16 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     DxDataGridModule,
     DxFormModule,
-    DxDiagramModule,    
+    DxDiagramModule,
     BrowserModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [
     HomeComponent,
     ProfileComponent,
-    DisplayDataComponent,
-    DiagramComponent
+    DisplayDataComponent
   ]
 })
 export class AppRoutingModule {}

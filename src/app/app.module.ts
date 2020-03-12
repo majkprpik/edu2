@@ -12,11 +12,13 @@ import { AuthService, ScreenService, AppInfoService } from "./shared/services";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { StoreModule } from "@ngrx/store";
-import * as fromApp from './store/app.reducer'
+import * as fromApp from "./store/app.reducer";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CommonModule,
     HttpClientModule,
     BrowserModule,
     SideNavOuterToolbarModule,

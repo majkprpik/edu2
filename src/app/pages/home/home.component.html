@@ -34,13 +34,4 @@
 
         <p>Please, read README in <a href="https://github.com/DevExpress/devextreme-angular-template/blob/master/README.md">devextreme-angular-template</a> GitHub repository for more information.</p>
     </div>
-
-    <ul>
-        <li *ngFor="let item of (employees | async).employees">
-            <p>{{ item.Djelatnik }}</p>
-            <input type="text" [(ngModel)]="item.Djelatnik">
-            <button (click)="deleteEmployee(item.Djelatnik)">Delete Employee</button>
-            <button (click)="updateEmployee(item.Djelatnik)">Update Employee</button>
-        </li>
-    </ul>
 </div>

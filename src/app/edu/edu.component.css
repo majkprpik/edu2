@@ -1,0 +1,23 @@
+::ng-deep .rect{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    height: 30px;
+    margin: 5px;
+}
+::ng-deep .demo-light{
+    background: rgba(123, 155, 207, 0.5);
+}
+::ng-deep .demo-dark{
+    background: rgba(123, 155, 207, 0.5);
+}
+::ng-deep .demo-dark.header{
+    background: rgba(123, 155, 207, 0.5);
+}
+::ng-deep .demo-dark.footer{
+    background: rgba(123, 155, 207, 0.5);
+}
+::ng-deep .small{
+    height: 30px;
+    border: 1px solid lightgray;
+}

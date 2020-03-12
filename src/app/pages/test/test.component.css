@@ -1,0 +1,39 @@
+.predavanje {
+    border: 1px red solid;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+h4 {
+    color: blue;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.primjer {
+    border: 1px black dotted;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+.stil1 {
+    color: purple;
+    font-weight: bold;
+}
+
+.stil2 {
+    color: orange;
+    font-style: italic;    
+}
+
+.stil3 {
+    color: teal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

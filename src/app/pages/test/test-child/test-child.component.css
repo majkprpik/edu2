@@ -1,0 +1,5 @@
+.child-component {
+    border: 1px blue dotted;
+    padding: 10px;
+    margin-bottom: 10px;
+}
