@@ -18,6 +18,7 @@ import { MiroslavModule } from './miroslav/miroslav.module';
 import { HrvojeModule } from './hrvoje/hrvoje.module';
 import { GoranModule } from './goran/goran.module';
 import { SenkovicModule } from './senkovic/senkovic.module';
+import { Davor2Module } from './davor2/davor2.module';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { SenkovicModule } from './senkovic/senkovic.module';
     ZdravkoModule, 
     MiroslavModule, 
     HrvojeModule, 
-    SenkovicModule
+    SenkovicModule,
+    Davor2Module
   ],
   declarations: [EduComponent]
 })

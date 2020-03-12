@@ -16,6 +16,7 @@ import { MiroslavComponent } from './miroslav/miroslav.component';
 import { NemanjaComponent } from './nemanja/nemanja.component';
 import { SenkovicComponent } from './senkovic/senkovic.component';
 import { ZdravkoComponent } from './zdravko/zdravko.component';
+import { Davor2Component } from './davor2/davor2.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path: "davor",
         component: DavorComponent
+      },
+      {
+        path: "davor2",
+        component: Davor2Component
       },
       {
         path: "denis",

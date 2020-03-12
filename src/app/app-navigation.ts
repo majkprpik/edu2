@@ -16,6 +16,10 @@ export const navigation = [
         path: "/edu/davor"
       },
       {
+        text: "Davor2",
+        path: "/edu/davor2"
+      },
+      {
         text: "Denis",
         path: "/edu/denis"
       },

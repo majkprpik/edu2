@@ -13,7 +13,7 @@ export class EmployeesService {
 
   constructor(private http: HttpClient) {}
 
-  getImenik(): Observable<Employee> {
+  getImenik(): Observable<Employee[]> {
     let body = {
       db: "Spin20160126",
       server: "Jupiter2012",
@@ -42,6 +42,6 @@ export class EmployeesService {
         }),
         options
       )
-      .pipe(map((response: any) => <Employee>response.imenik));
+      .pipe(map((response: any) => <Employee[]>response.imenik));
   }
 }
