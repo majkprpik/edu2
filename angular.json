@@ -47,13 +47,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/devexpress-diagram/dist/dx-diagram.min.css",
               "node_modules/devextreme/dist/css/dx.common.css",
               "src/themes/generated/theme.base.css",
               "src/themes/generated/theme.additional.css",
               "src/dx-styles.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/devexpress-diagram/dist/dx-diagram.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -115,10 +118,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [ 
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [              
+            ]
           }
         },
         "lint": {

@@ -22,6 +22,8 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@ngrx/store": "^8.6.0",
+    "devexpress-diagram": "^0.1.53",
     "devextreme": "latest",
     "devextreme-angular": "latest",
     "devextreme-schematics": "^1.0.12",

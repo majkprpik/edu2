@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  genericServiceUrlForData: 'http://213.202.75.122:30080/jupitermobile/gen/api/data',
+  authToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlNwaW4iLCJuYmYiOjE1NTE2OTA0MzAsImV4cCI6MTU4MzMxMjc4OCwiaWF0IjoxNTUxNjkwNDMwLCJpc3MiOiJTcGluIn0.0ZYOjrkF-biXdrH-78rzH_jqsYlnFjznLtuWzZVTO-Y'
 };
 
 /*

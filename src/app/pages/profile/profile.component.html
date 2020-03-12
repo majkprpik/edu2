@@ -14,4 +14,20 @@
         [colCountByScreen]="colCountByScreen"
     >
     </dx-form>
+    <div class="vedran" style="border: 1px black solid; padding: 5px; margin: 5px;">
+        <h3>vedran primjer</h3>
+        <div>
+            <h6>add new employee</h6>
+            Ime djelatnika:<input type="text" [(ngModel)]="imeNoviDjelatnik">
+        </div>
+        <button (click)="addEmployee()">asdf</button>
+        <ul>
+            <li *ngFor="let item of (employees | async).employees">
+                <p>{{ item.Djelatnik }}</p>
+                <input type="text" [(ngModel)]="editDjelatnik">
+                <button (click)="deleteEmployee(item)">Delete Employee</button>
+                <button (click)="updateEmployee(item)">Update Employee</button>
+            </li>
+        </ul>
+    </div>
 </div>
