@@ -72,7 +72,21 @@ export const navigation = [
     items: [
       {
         text: "Grid",
-        path: "/examples/grid"
+        items: [
+          {
+            text: "Overview",
+            path: "/examples/grid/overview"
+          },
+          {
+            text: "Data binding",
+            items: [
+              {
+                text: "Simple array",
+                path: "/examples/grid/data-binding/simple-array"
+              }
+            ]
+          }
+        ]
       },
       {
         text: "Gantt",

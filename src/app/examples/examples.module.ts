@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 
 import { CommonModule } from "@angular/common";
 import { ExamplesComponent } from "./examples.component";
-import { GridComponent } from "./grid/grid.component";
 import { ExamplesRoutingModule } from "./examples-routing.modules";
 import { GridModule } from "./grid/grid.module";
 import { GanttModule } from './gantt/gantt.module';
