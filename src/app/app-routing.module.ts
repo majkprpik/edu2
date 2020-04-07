@@ -28,6 +28,11 @@ const routes: Routes = [
     loadChildren: () =>
       import("./examples/examples.module").then(m => m.ExamplesModule)
   },
+  {
+    path: "spin-generic-ui",
+    loadChildren: () =>
+      import("./spin-generic-ui/spin-generic-ui.module").then(m => m.SpinGenericUIModule)
+  },
   // {
   //   path: "display-data",
   //   component: DisplayDataComponent,

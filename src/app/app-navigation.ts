@@ -117,6 +117,11 @@ export const navigation = [
         path: "/examples/tree-list"
       }
     ]
+  },
+  {
+    text: "SpinGenericUI",
+    icon: "smalliconslayout",
+    path: "spin-generic-ui"
   }
   // {
   //   text: 'Home',
