@@ -33,6 +33,11 @@ const routes: Routes = [
     loadChildren: () =>
       import("./spin-generic-ui/spin-generic-ui.module").then(m => m.SpinGenericUIModule)
   },
+  {
+    path: "hrm",
+    loadChildren: () =>
+      import("./hrm/hrm.module").then(m => m.HrmModule)
+  },
   // {
   //   path: "display-data",
   //   component: DisplayDataComponent,

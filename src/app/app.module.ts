@@ -15,6 +15,7 @@ import { StoreModule } from "@ngrx/store";
 import * as fromApp from "./store/app.reducer";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from '@angular/forms';
+import { HrmModule } from './hrm/hrm.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterModule,
     LoginFormModule,
     AppRoutingModule,
+    HrmModule,
     StoreModule.forRoot(fromApp.appReducer)
   ],
   providers: [AuthService, ScreenService, AppInfoService],

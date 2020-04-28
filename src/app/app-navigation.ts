@@ -71,6 +71,11 @@ export const navigation = [
     icon: "activefolder"
   },
   {
+    text: "HRM",
+    path: "/hrm",
+    icon: "activefolder"
+  },
+  {
     text: "Examples",
     icon: "smalliconslayout",
     items: [
