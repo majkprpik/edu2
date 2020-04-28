@@ -9,6 +9,7 @@ import { PivotComponent } from "./pivot/pivot.component";
 import { HtmlEditorComponent } from "./html-editor/html-editor.component";
 import { TreeListComponent } from "./tree-list/tree-list.component";
 import { SchedulerComponent } from "./scheduler/scheduler.component";
+import { MyFormsComponent } from './my-forms/my-forms.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
     children: [
       {
         path: "grid",
-        loadChildren: () => import("./grid/grid.module").then(m => m.GridModule)
+        component: GridComponent
       },
       {
         path: "gantt",
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path: "scheduler",
         component: SchedulerComponent
+      },
+      {
+        path: "forms",
+        component: MyFormsComponent
       }
     ]
   }

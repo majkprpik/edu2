@@ -14,11 +14,13 @@ import { HttpClientModule } from "@angular/common/http";
 import { StoreModule } from "@ngrx/store";
 import * as fromApp from "./store/app.reducer";
 import { CommonModule } from "@angular/common";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
     SideNavOuterToolbarModule,

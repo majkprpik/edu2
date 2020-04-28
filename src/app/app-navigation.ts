@@ -76,21 +76,7 @@ export const navigation = [
     items: [
       {
         text: "Grid",
-        items: [
-          {
-            text: "Overview",
-            path: "/examples/grid/overview"
-          },
-          {
-            text: "Data binding",
-            items: [
-              {
-                text: "Simple array",
-                path: "/examples/grid/data-binding/simple-array"
-              }
-            ]
-          }
-        ]
+        path: "/examples/grid"
       },
       {
         text: "Gantt",
@@ -115,6 +101,10 @@ export const navigation = [
       {
         text: "Tree-list",
         path: "/examples/tree-list"
+      },
+      {
+        text: "Forms",
+        path: "/examples/forms"
       }
     ]
   },

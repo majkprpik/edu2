@@ -10,9 +10,10 @@ import { PivotModule } from './pivot/pivot.module';
 import { HtmlEditorModule } from './html-editor/html-editor.module';
 import { TreeListModule } from './tree-list/tree-list.module';
 import { SchedulerModule } from './scheduler/scheduler.module';
+import { MyFormsModule } from './my-forms/my-forms.module';
 
 @NgModule({
-  imports: [CommonModule, ExamplesRoutingModule, GridModule, GanttModule, ChartModule, PivotModule, HtmlEditorModule, TreeListModule, SchedulerModule],
+  imports: [CommonModule, ExamplesRoutingModule, GridModule, GanttModule, ChartModule, PivotModule, HtmlEditorModule, TreeListModule, SchedulerModule, MyFormsModule],
   declarations: [ExamplesComponent]
 })
 export class ExamplesModule {}
