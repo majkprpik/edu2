@@ -26,6 +26,7 @@ export class Davor2Component implements OnInit {
 
   constructor(private _employeeService: EmployeesService) {
       this._employeeService.getImenik().subscribe((res:Employee[]) => this.dataSource = res);
+ 
   }
 
   ngOnInit() {
